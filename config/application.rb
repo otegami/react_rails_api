@@ -33,10 +33,10 @@ module ReactBooks
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://0.0.0.0:4000'
+        origins 'localhost:4000'
         resource '*',
         :headers => :any,
-        :methods => [:get, :post, :patch, :delete, :options]
+        :methods => [:get, :post, :patch, :put, :delete, :options]
       end
     end 
   end
